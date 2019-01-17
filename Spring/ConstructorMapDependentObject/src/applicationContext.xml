@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+
+<bean id="answer1" class="com.ConsturctorMap.Answer">
+<constructor-arg value="1" type="int"></constructor-arg>
+<constructor-arg value="Spring is a elastic type used in objects"></constructor-arg>
+<constructor-arg value="27/12/2018"></constructor-arg>
+</bean>
+<bean id="answer2" class="com.ConsturctorMap.Answer">
+<constructor-arg value="2" type="int"></constructor-arg>
+<constructor-arg value="Spring is a lightweight framework."></constructor-arg>
+<constructor-arg value="26/12/2018"></constructor-arg>
+</bean>
+
+<bean id="user1" class="com.ConsturctorMap.User">
+<constructor-arg value="1" type="int"></constructor-arg>
+<constructor-arg value="venkat"></constructor-arg>
+<constructor-arg value="kunnuvenkat@gmail.com"></constructor-arg>
+</bean>
+
+<bean id="user2" class="com.ConsturctorMap.User">
+<constructor-arg value="2" type="int"></constructor-arg>
+<constructor-arg value="chaitanya"></constructor-arg>
+<constructor-arg value="chaitanya@gmail.com"></constructor-arg>
+</bean>
+
+<bean id="question" class="com.ConsturctorMap.Question">
+<constructor-arg value="1" type="int" ></constructor-arg>
+<constructor-arg value="What is Spring"></constructor-arg>
+<constructor-arg>
+<map>
+<entry key-ref="answer1" value-ref="user1"></entry>
+<entry key-ref="answer2" value-ref="user2"></entry>
+</map>
+</constructor-arg>
+</bean>
+
+</beans>
